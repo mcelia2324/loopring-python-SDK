@@ -20,7 +20,7 @@ with open('loopringCreds.pickle', 'rb') as f:
     account_id = creds['account_id']
 
 # Initialize the Loopring API with API key and account ID
-loopring = Session.initialize(api_key, account_id)
+Session.initialize(api_key, account_id)
 
 # Get the account balances
 account = Account()
