@@ -88,8 +88,8 @@ class Fees(Session):
     def get_erc20_offchain_fees(
         self,
         request_type: OffchainRequestType,
-        token: str = "",
-        amount: str = ""
+        token: str = str(),
+        amount: str = str()
     ) -> FeesData:
         """
         Get the ERC20 fees for the account associated with the API key.
@@ -134,7 +134,7 @@ class Fees(Session):
     def get_nft_offchain_fees(
         self,
         request_type: OffchainRequestType,
-        token_address: str = "",
+        token_address: str = str(),
         deploy_in_withdraw: str = "false"
     ) -> FeesData:
         """
