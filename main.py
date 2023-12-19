@@ -2,8 +2,7 @@ import pickle
 from loopring.session import Session
 from loopring.account import Account
 from loopring.exchange import Exchange
-from loopring.fees import Fees, OffchainRequestType
-
+from utils import join_balance_with_token_info
 
 # Set your API key and account ID
 creds = {'api_key': 'YOUR_API_KEY', 'account_id': 'YOUR_ACCOUNT_ID'}
@@ -25,10 +24,13 @@ Session.initialize(api_key, account_id)
 # Get the account balances
 account = Account()
 balances = account.get_account_balances()
-print(balances)
 
 # Get token info on exchange
 exchange = Exchange()
-tokens = exchange.get_markets()
-for i in tokens:
+tokens = exchange.get_tokens()
+
+# Combines the two dataclasses objects (balances and tokens) into one
+# Doing so allows you to see things like the token symbol and name
+join = join_balance_with_token_info(balances, tokens)
+for i in join:
     print(i)
