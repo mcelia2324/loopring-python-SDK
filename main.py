@@ -4,22 +4,9 @@ from loopring.account import Account
 from loopring.exchange import Exchange
 from utils import join_balance_with_token_info
 
-# Set your API key and account ID
-creds = {'api_key': 'YOUR_API_KEY', 'account_id': 'YOUR_ACCOUNT_ID'}
-
-# Save your creds to a serialized pickle file
-with open('loopringCreds.pickle', 'wb') as f:
-    pickle.dump(creds, f)
-
-
-# Load the creds file and set the API key and account ID
-with open('loopringCreds.pickle', 'rb') as f:
-    creds = pickle.load(f)
-    api_key = creds['api_key']
-    account_id = creds['account_id']
 
 # Initialize the Loopring API with API key and account ID
-Session.initialize(api_key, account_id)
+Session.initialize()
 
 # Get the account balances
 account = Account()
