@@ -10,13 +10,10 @@ Create a New File: Name this file .env. Add Your Credentials: Edit the .env file
 ### .env Contents
 API_KEY=your_api_key_here \
 ACCOUNT_ID=your_account_id_here \
-PRIVATE_KEY: your_private_key_here\
-WALLET_ADDRESS: your_wallet_address_here
 
 ### Security and Best Practices
-Confidentiality: Keep your .env file confidential. It contains sensitive data.
-Deployment: In deployment environments, ensure these variables are set securely.
-Utilizing the Session Class
+Confidentiality: Keep your .env file confidential. It contains sensitive data. \
+Deployment: In deployment environments, ensure these variables are set securely. \
 With the .env file in place, the Session class in your Python code will automatically load and use these variables for Loopring API authentication.
 
 ### Further Information
