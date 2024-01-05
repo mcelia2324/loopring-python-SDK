@@ -9,7 +9,7 @@ Create a New File: Name this file .env. Add Your Credentials: Edit the .env file
 
 ### .env Contents
 API_KEY=your_api_key_here \
-ACCOUNT_ID=your_account_id_here \
+ACCOUNT_ID=your_account_id_here 
 
 ### Security and Best Practices
 Confidentiality: Keep your .env file confidential. It contains sensitive data. \
